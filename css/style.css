@@ -7,15 +7,6 @@
         color: seashell;
     }
     
-    #profile {
-        background: rgb(24, 24, 24);
-        height: 75px;
-        border-top: solid rgb(255, 0, 212) 1px;
-        position: fixed;
-        width: 100vw;
-        bottom: 0;
-    }
-    
     footer {
         grid-area: fo;
         background: rgb(42, 42, 42);
@@ -111,7 +102,17 @@
         grid-area: ht;
     }
     
-    .topic {}
+    #add {
+        border: solid rgb(200, 200, 200) 1px;
+        padding: 0 2px;
+        font-size: .75rem;
+        border-radius: 100%;
+    }
+    
+    .topic {
+        border: solid seashell 1px;
+        width: 1fr;
+    }
     /*
         -------------------------------------------------------------------------------------------------------------------
     */
@@ -127,14 +128,54 @@
         justify-self: flex-end;
         display: block;
         height: 1px;
-        width: 100vw;
+        width: 100%;
         border: 0;
-        border-top: 2px solid rgb(88, 88, 88);
+        border-top: 2px solid rgb(59, 59, 59);
         margin: 1rem 0;
         padding: 0;
         grid-area: hr;
     }
     
-    h1 {
+    .middle {
         padding: 1rem;
+    }
+    
+    .side {
+        margin-left: .5rem;
+    }
+    
+    .sideP {
+        margin-left: .5rem;
+        color: rgb(200, 200, 200);
+    }
+    
+    #profile {
+        background: rgb(24, 24, 24);
+        height: 75px;
+        border-top: solid rgb(255, 0, 212) 1px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+    
+    .titleWrap1 {
+        display: flex;
+    }
+    
+    .titleWrap2 {
+        display: flex;
+        margin-left: 5px;
+    }
+    
+    .title {
+        padding: 2px 5px;
+        font-size: 0.75rem;
+        width: auto;
+        border: solid rgb(255, 0, 212) 1px;
+        border-radius: 35%;
+    }
+    
+    .topicWrap {
+        display: flex;
+        flex-direction: column;
     }
