@@ -15,12 +15,16 @@
     header {
         position: fixed;
         background: rgb(24, 24, 24);
-        height: 75px;
+        height: 60px;
         width: 100%;
         padding: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    
+    #logga {
+        height: 25px;
     }
     
     #nav_links {
@@ -40,7 +44,7 @@
     }
     
     .nav_active {
-        transform: translateY(275px);
+        transform: translateY(260px);
     }
     
     #nav_links li {
@@ -74,7 +78,7 @@
     }
     
     .crossed_line #line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
+        transform: rotate(-45deg) translate(-8px, 6px);
     }
     
     .crossed_line #line2 {
@@ -82,7 +86,7 @@
     }
     
     .crossed_line #line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
+        transform: rotate(45deg) translate(-8px, -6px);
     }
     
     #welcome {
@@ -156,6 +160,13 @@
         position: fixed;
         width: 100%;
         bottom: 0;
+    }
+    
+    #pfp {
+        height: 80px;
+        position: absolute;
+        left: 15px;
+        top: -40px;
     }
     
     .titleWrap1 {
