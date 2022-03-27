@@ -1,0 +1,7 @@
+searchIcon: https://www.vecteezy.com/free-vector/search-icon
+pfp: https://pixabay.com/vectors/blank-profile-picture-mystery-man-973460/
+cog: https://www.vecteezy.com/free-vector/cog
+book: https://www.vecteezy.com/free-vector/abstract
+wave: https://www.vecteezy.com/free-vector/hand-wave-icon
+add: https://www.vecteezy.com/free-vector/add
+crown: https://www.vecteezy.com/free-vector/crown
