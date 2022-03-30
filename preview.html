@@ -6,27 +6,164 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Preview</title>
 </head>
 
 <body>
-    <div class="titleWrap1">
-        <div class="title">
-            <p>title</p>
+
+    <header>
+        <a href="index.html">
+            <img id="logga" src="img/logo.png" alt="our logo">
+        </a>
+        <input class="searchbarH" placeholder="Search..." type="text">
+        <nav>
+            <ul id="nav_links">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="">Placeholder</a>
+                </li>
+                <li>
+                    <a href="profile.html">About us</a>
+                </li>
+            </ul>
+            <div id="burger">
+                <div class="burger_line" id="line1"></div>
+                <div class="burger_line" id="line2"></div>
+                <div class="burger_line" id="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="wrapP">
+        <main id="mainPreview">
+            <section id="discDesc">
+                <!-- ok med global h-tag?
+                Hur använder jag saker som "-webkit-appearance"?????? -->
+                <h2 id="DiscH">
+                    <span class="underline"> Återinför lunchtuplur i sackosäckrummet
+                </h2>
+
+                <div id="authorDate">
+                    <h3>By: Username2324134</h3>
+                    <h3>29-02-2022</h3>
+                </div>
+                <div class="description">
+                    <p class="descriptionP"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti repellat voluptatum delectus facere eligendi esse perspiciatis, hic voluptas illum at nostrum, id quisquam totam nam beatae eveniet. Nulla, aspernatur incidunt?</p>
+                    <p class="descriptionP"> odit molestiae qui nam corporis dolorem cupiditate laboriosam sunt, atque minus! Excepturi suscipit cupiditate tempora fuga esse ullam itaque praesentium corporis doloribus sequi omnis dignissimos modi consequuntur impedit vero reiciendis
+                        saepe explicabo neque, quasi architecto beatae quaerat.
+                    </p>
+                    <div class="titleWrapT">
+                        <p>Editing requirements:</p>
+                        <div class="title">Swedish</div>
+                        <div class="title">ttl</div>
+                        <div class="title">titleelee</div>
+                    </div>
+                </div>
+            </section>
+
+            <article id="roomActive">
+                <h2 class="side">Active rooms</h2>
+                <div class="topicWrap">
+                    <div class="room">
+                        <div class="descriptionR">
+                            <a href="discussion.html"> <h3>Det finns inget att diskutera. Svaret är självklart.</h3></a>
+                            <p>Online: 25/42</p>
+                            <p class="descriptionP" > saepe explicabo neque, quasi architecto beatae quaerat.
+                            </p>
+                            <p class="descriptionP"> odit molestiae qui nam corporis dolorem cupiditate laboriosam sunt, atque minus! Excepturi suscipit cupiditate tempora fuga esse ullam itaque praesentium corporis doloribus sequi omnis dignissimos modi consequuntur impedit vero reiciendis
+                            </p>
+                        </div>
+                        <div class="titleWrapT2">
+                            <div class="title"><em>No titles</em></div> 
+                        </div>
+                    </div>
+                    <div class="room">
+                        <div class="descriptionR">
+                            <a href="discussion.html"> <h3>En inlärningssynpunkt</h3></a>
+                            <p>Online: 25/42</p>
+                            <p class="descriptionP" > saepe explicabo neque, quasi architecto beatae quaerat.
+                            </p>
+                            <p class="descriptionP"> odit molestiae qui nam corporis dolorem cupiditate laboriosam sunt, atque minus! Excepturi suscipit cupiditate tempora fuga esse ullam itaque praesentium corporis doloribus sequi omnis dignissimos modi consequuntur impedit vero reiciendis
+                            </p>
+                        </div>
+                        
+                        
+                        <div class="titleWrapT2">
+                            <div class="title">Teacher</div>
+                            <div class="title">collage education</div>
+                            <div class="title">loreeemm</div>
+                        </div>
+                    </div>
+                    <p class="seeMore"> View full list</p>
+                </div>
+                <hr>
+            </article>
+        <article id="roomConcluded"></article>
+    </main>
+    <footer>
+
+        <div id="neverStop">
+            <img id="zedditHead" src="img/zedditHead.png" alt="The zeddit logo">
+
+            <img src="img/ram.png" alt="">
         </div>
-        <div class="title">
-            <p>title</p>
+        <div id="catWrap">
+            <ul class="footerCat">
+                <h3 class="footerH">Zeddit</h3>
+                <li>About us</li>
+                <li>Lorem</li>
+                <li>Work</li>
+            </ul>
+            <ul class="footerCat">
+                <h3 class="footerH">Contact us</h3>
+                <li>Twitter: @ZedditOfficial</li>
+                <li>Mail: zeddit@gmail.com</li>
+                <li>Phone: +69 420 117</li>
+                <li>Cumque cum</li>
+            </ul>
+            <ul class="footerCat">
+                <h3 class="footerH">Policies</h3>
+                <li>Privacy</li>
+                <li>Terms of service</li>
+                <li>Lorem, ipsum</li>
+                <li>Lorem, ipsum dolor</li>
+            </ul>
+            <ul class="footerCat">
+                <h3 class="footerH">Support</h3>
+                <li>Report missuse</li>
+                <li>Q&A</li>
+            </ul>
         </div>
-        <div class="title">
-            <p>title</p>
-        </div>
-        <div class="title">
-            <p>title</p>
-        </div>
-        <div class="title">
-            <p>title</p>
-        </div>
+    </footer>
     </div>
+
+
+    <aside id="profile">
+        <img id="pfp" src="img/pfp.png" alt="Your profile picture">
+        <h3 id="pfName"> Username123</h3>
+        <div id="pfWrap">
+            <div class="titleWrapP">
+                <div class="titleWrap2P">
+                    <div class="title">tiittlle</div>
+                    <div class="title">ttl</div>
+                    <div class="title">titleelee</div>
+                </div>
+                <div id="dotWrap">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <img class="func" src="img/wave.png" alt="find others">
+            <img class="func" src="img/book.png" alt="history">
+            <img class="func" src="img/cog.png" alt="settings">
+        </div>
+    </aside>
+
 </body>
+
+<script src="js/function.js "></script>
 
 </html>
