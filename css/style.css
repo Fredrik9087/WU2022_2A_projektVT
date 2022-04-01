@@ -1,480 +1,502 @@
-@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    max-width: 100%;
-    color: seashell;
-    cursor: default;
-    list-style: none;
-    font-family: sans-serif;
-}
-
-a {
-    cursor: pointer;
-}
-
-a h3 {
-    cursor: pointer;
-}
-
-a img {
-    cursor: pointer;
-}
-
-footer {
-    grid-area: fo;
-    background: rgb(33, 33, 33);
-    display: flex;
-}
-
-#zedditHead {
-    padding: 20px;
-    width: fit-content;
-}
-
-#tm {
-    text-decoration: underline;
-    font-size: 0.7rem;
-    justify-self: flex-start;
-}
-
-#catWrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    min-width: 260px;
-    width: 100%;
-}
-
-.footerCat {
-    height: 20%;
-    padding: 10px;
-}
-
-.footerCat li {
-    font-size: 0.8rem;
-    color: rgb(255, 78, 160);
-    cursor: pointer;
-    margin: 5px;
-}
-
-#neverStop {
-    min-width: 110px;
-    max-width: 110px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-header {
-    position: fixed;
-    background: rgb(24, 24, 24);
-    max-height: 8vh;
-    min-height: 60px;
-    width: 100%;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#logga {
-    height: 25px;
-}
-
-#nav_links {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: right;
-    background-color: rgba(24, 24, 24, 0.8);
-    /*fixa blur ksk*/
-    position: absolute;
-    padding: 10px;
-    right: 0;
-    height: 175px;
-    top: -200px;
-    transition: all 0.4s;
-}
-
-.nav_active {
-    transform: translateY(260px);
-}
-
-#nav_links li {
-    display: flex;
-    justify-content: flex-end;
-}
-
-#nav_links a {
-    letter-spacing: 0.1rem;
-    font-weight: bold;
-    font-size: 1.25rem;
-    margin-left: 10px;
-}
-
-#nav_links a:hover {
-    color: grey;
-    transition: ease 0.3s;
-}
-
-.burger_line {
-    background-color: seashell;
-    height: 4px;
-    width: 35px;
-    margin: 6px;
-    border-radius: 10%;
-    transition: all 0.3s;
-}
-
-#burger {
-    cursor: pointer;
-}
-
-.seeMore {
-    color: rgb(255, 78, 160);
-    align-self: center;
-    padding: 1rem;
-    cursor: pointer;
-}
-
-.crossed_line #line1 {
-    transform: rotate(-45deg) translate(-8px, 6px);
-}
-
-.crossed_line #line2 {
-    opacity: 0;
-}
-
-.crossed_line #line3 {
-    transform: rotate(45deg) translate(-8px, -6px);
-}
-
-#welcome {
-    grid-area: we;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../img/Chalkboard.jpg");
-    background-size: cover;
-    margin-bottom: 1rem;
-}
-
-#searchbar {
-    font-size: 1rem;
-    background-color: transparent;
-    outline: none;
-    border: none;
-    border-bottom: solid rgb(255, 78, 160) 2px;
-    margin-bottom: 2rem;
-    padding: .5rem;
-    width: 280px;
-    cursor: text;
-    background: rgb(42, 42, 42, 0.8);
-}
-
-.searchbarH {
-    font-size: .8rem;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.75);
-    outline: none;
-    border: none;
-    border: solid rgb(0, 0, 0) 2px;
-    width: 100%;
-    cursor: text;
-    position: absolute;
-    top: 60px;
-    padding: 5px;
-    left: 0;
-}
-
-.searchbarH::placeholder {
-    color: black;
-}
-
-#news {
-    grid-area: ns;
-    padding-left: 0.3rem;
-}
-
-#forYou {
-    grid-area: fy;
-    padding-left: 0.3rem;
-}
-
-#hotTopics {
-    grid-area: ht;
-    padding-left: 0.3rem;
-}
-
-.add {
-    width: 10px;
-}
-
-.topic {
-    padding: .3rem;
-    margin: 5px 1rem;
-    cursor: pointer;
-}
-
-.topic:hover {
-    background-color: rgb(80, 80, 80);
-}
-
-#wrapI {
-    display: grid;
-    grid-template-rows: 60px 70vh 1fr 1fr 1fr 500px 75px;
-    grid-template-areas: "." "we" "ns" "fy" "ht" "fo" ".";
-    background-color: rgb(42, 42, 42);
-    min-width: 370px;
-}
-
-.underline {
-    border-bottom: solid rgb(255, 78, 160) 1px;
-}
-
-hr {
-    justify-self: flex-end;
-    height: 1px;
-    width: 100%;
-    border: 0;
-    border-top: 2px solid rgb(80, 80, 80);
-    margin: 1rem 0;
-    padding: 0;
-}
-
-p {
-    font-size: 0.8rem;
-    color: rgb(160, 160, 160);
-}
-
-h1 {
-    font-size: 3rem;
-    font-family: serif;
-}
-
-h2 {
-    font-size: 1.85rem;
-    font-family: serif;
-}
-
-h2 span {
-    font-size: 1.85rem;
-    font-family: serif;
-}
-
-h3 {
-    font-size: 1.14rem;
-    font-weight: normal;
-    font-family: serif;
-}
-
-h3 span {
-    font-size: 1.14rem;
-    font-weight: normal;
-    font-family: serif;
-    cursor: pointer;
-}
-
-#DiscH {
-    margin: 50px 0 10px;
-}
-
-.footerH {
-    font-weight: bold;
-}
-
-#hello {
-    padding: 1rem;
-    text-align: center;
-    background-color: rgb(42, 42, 42, 0.8);
-    font-family: Calligraffitti;
-    border-radius: 20%;
-}
-
-.side {
-    margin-left: .5rem;
-}
-
-.sideP {
-    margin-left: .5rem;
-    margin-bottom: 0.5rem;
-}
-
-#profile {
-    background: rgb(24, 24, 24);
-    height: 75px;
-    border-top: solid 2px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    display: flex;
-}
-
-#pfp {
-    height: 80px;
-    position: absolute;
-    left: 15px;
-    top: -40px;
-}
-
-#pfName {
-    align-self: flex-end;
-    margin: 8px 5px 8px 15px;
-}
-
-.titleWrapP {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    /* if  there is flexwrap, then titles disappear untill flex doesn not wrap anymore*/
-    align-items: center;
-}
-
-#dotWrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 2px;
-}
-
-#dotWrap:hover {
-    cursor: pointer;
-}
-
-.dot {
-    border-radius: 100%;
-    background-color: rgb(80, 80, 80);
-    height: 5px;
-    width: 5px;
-    margin: 1px;
-}
-
-.title {
-    padding: 2px 5px;
-    margin: 2px;
-    font-size: 0.8rem;
-    width: auto;
-    border-radius: 35%;
-    white-space: nowrap;
-}
-
-.topicWrap {
-    display: flex;
-    flex-direction: column;
-}
-
-#pfWrap {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    min-width: 226px;
-}
-
-#funcWrap {
-    display: flex;
-    align-items: center;
-}
-
-.func {
-    height: 50px;
-    padding: 7px;
-    margin: 5px;
-    border: solid rgb(255, 78, 160) 2px;
-    border-radius: 25%;
-}
-
-.func:hover {
-    cursor: pointer;
-}
-
-#wrapP {
-    display: grid;
-    grid-template-rows: 90px 1fr 250px 75px;
-    grid-template-areas: "." "mp" "fo" ".";
-    background-color: rgb(42, 42, 42);
-    min-width: 370px;
-}
-
-#mainPreview {
-    grid-area: mp;
-    padding: 5px;
-}
-
-#discDesc {
-    padding: 0 10px;
-}
-
-.descriptionP {
-    margin-top: 0.5rem;
-}
-
-.descriptionR {
-    width: 67%;
-}
-
-.titleWrapT2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    height: fit-content;
-    width: 33%;
-}
-
-.titleWrapT {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 0.8rem;
-}
-
-#authorDate {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: rgb(80, 80, 80);
-}
-
-#roomActive {
-    margin: 20px 0;
-}
-
-.room {
-    padding: 1rem;
-    cursor: pointer;
-    background-color: rgb(33, 33, 33);
-    border: solid rgb(42, 42, 42);
-    display: flex;
-}
-
-@media screen and (min-width:800px) {
-    #burger {
-        display: none;
+    @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        max-width: 100%;
+        color: seashell;
+        cursor: default;
+        list-style: none;
+        font-family: sans-serif;
     }
-    #nav_links {
+    
+    a {
+        cursor: pointer;
+    }
+    
+    a h3 {
+        cursor: pointer;
+    }
+    
+    a img {
+        cursor: pointer;
+    }
+    
+    footer {
+        grid-area: fo;
+        background: rgb(33, 33, 33);
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
         align-items: center;
-        background-color: transparent;
-        position: static;
-        height: auto;
     }
-    nav {
+    
+    #zedditHead {
+        padding-top: 20px;
         width: 100%;
     }
-    #logga:hover {
-        filter: grayscale(40%);
+    
+    #tm {
+        text-decoration: underline;
+        font-size: 0.7rem;
+        justify-self: flex-start;
     }
+    
+    #catWrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        min-width: 260px;
+        width: 100%;
+    }
+    
+    .footerCat {
+        height: 20%;
+        padding: 10px;
+    }
+    
+    .footerCat li {
+        font-size: 0.8rem;
+        color: rgb(255, 78, 160);
+        cursor: pointer;
+        margin: 5px;
+    }
+    
+    #neverStop {
+        min-width: 110px;
+        max-width: 110px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    
+    header {
+        position: fixed;
+        background: rgb(24, 24, 24);
+        max-height: 8vh;
+        min-height: 60px;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #logga {
+        height: 25px;
+    }
+    
+    #nav_links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: rgba(24, 24, 24, 0.8);
+        /*fixa blur ksk*/
+        position: absolute;
+        padding: 10px;
+        right: 0;
+        height: 175px;
+        top: -200px;
+        transition: all 0.4s;
+    }
+    
+    .nav_active {
+        transform: translateY(260px);
+    }
+    
+    #nav_links li {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    #nav_links a {
+        letter-spacing: 0.1rem;
+        font-weight: bold;
+        font-size: 1.25rem;
+        margin-left: 10px;
+    }
+    
+    #nav_links a:hover {
+        color: grey;
+        transition: ease 0.3s;
+    }
+    
+    .burger_line {
+        background-color: seashell;
+        height: 4px;
+        width: 35px;
+        margin: 6px;
+        border-radius: 10%;
+        transition: all 0.3s;
+    }
+    
+    #burger {
+        cursor: pointer;
+    }
+    
+    .seeMore {
+        color: rgb(255, 78, 160);
+        border: solid rgb(255, 78, 160) 3px;
+        border-radius: 1em;
+        align-self: center;
+        padding: 1rem;
+        cursor: pointer;
+    }
+    
+    .crossed_line #line1 {
+        transform: rotate(-45deg) translate(-8px, 6px);
+    }
+    
+    .crossed_line #line2 {
+        opacity: 0;
+    }
+    
+    .crossed_line #line3 {
+        transform: rotate(45deg) translate(-8px, -6px);
+    }
+    
+    #welcome {
+        grid-area: we;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../img/Chalkboard.jpg");
+        background-size: cover;
+        margin-bottom: 1rem;
+    }
+    
+    #searchbar {
+        font-size: 1rem;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-bottom: solid rgb(255, 78, 160) 2px;
+        margin-bottom: 2rem;
+        padding: .5rem;
+        width: 280px;
+        cursor: text;
+        background: rgb(42, 42, 42, 0.8);
+    }
+    
+    .searchbarH {
+        font-size: 1rem;
+        color: black;
+        background-color: rgba(255, 255, 255, 0.9);
+        outline: none;
+        border: none;
+        border: solid rgb(0, 0, 0) 2px;
+        width: 100%;
+        cursor: text;
+        position: absolute;
+        top: 60px;
+        padding: 5px;
+        left: 0;
+    }
+    
+    .searchbarH::placeholder {
+        color: black;
+    }
+    
+    #news {
+        grid-area: ns;
+        padding-left: 0.3rem;
+    }
+    
+    #forYou {
+        grid-area: fy;
+        padding-left: 0.3rem;
+    }
+    
+    #hotTopics {
+        grid-area: ht;
+        padding-left: 0.3rem;
+    }
+    
+    .add {
+        width: 10px;
+    }
+    
+    .topic {
+        padding: .3rem;
+        margin: 5px 1rem;
+        cursor: pointer;
+    }
+    
+    .topic:hover {
+        background-color: rgb(80, 80, 80);
+    }
+    
     #wrapI {
-        grid-template-rows: 60px 70vh 1fr 250px 75px;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: ". . ." "we we we" "ns fy ht" "fo fo fo" ". . .";
+        display: grid;
+        grid-template-rows: 60px 70vh 1fr 1fr 1fr 500px 75px;
+        grid-template-areas: "." "we" "ns" "fy" "ht" "fo" ".";
+        background-color: rgb(42, 42, 42);
+        min-width: 370px;
     }
+    
+    .underline {
+        border-bottom: solid rgb(255, 78, 160) 1px;
+    }
+    
     hr {
-        display: none;
+        justify-self: flex-end;
+        height: 1px;
+        width: 100%;
+        border: 0;
+        border-top: 2px solid rgb(80, 80, 80);
+        margin: 1rem 0;
+        padding: 0;
     }
-}
+    
+    p {
+        font-size: 0.8rem;
+        color: rgb(200, 200, 200);
+    }
+    
+    h1 {
+        font-size: 3rem;
+        font-family: serif;
+    }
+    
+    h2 {
+        font-size: 1.85rem;
+        font-family: serif;
+    }
+    
+    h2 span {
+        font-size: 1.85rem;
+        font-family: serif;
+    }
+    
+    h3 {
+        font-size: 1.14rem;
+        font-weight: normal;
+        font-family: serif;
+    }
+    
+    h3 span {
+        font-size: 1.14rem;
+        font-weight: normal;
+        font-family: serif;
+        cursor: pointer;
+    }
+    
+    #DiscH {
+        margin: 30px 0 20px;
+    }
+    
+    .footerH {
+        font-weight: bold;
+    }
+    
+    #hello {
+        padding: 1rem;
+        text-align: center;
+        background-color: rgb(42, 42, 42, 0.8);
+        font-family: Calligraffitti;
+        border-radius: 20%;
+    }
+    
+    .side {
+        margin-left: .5rem;
+    }
+    
+    .sideP {
+        margin-left: .5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    #profile {
+        background: rgb(24, 24, 24);
+        height: 75px;
+        border-top: solid 2px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+    }
+    
+    #pfp {
+        height: 80px;
+        position: absolute;
+        left: 15px;
+        top: -40px;
+    }
+    
+    #pfName {
+        align-self: flex-end;
+        margin: 8px 5px 8px 15px;
+    }
+    
+    .titleWrapP {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* if  there is flexwrap, then titles disappear untill flex doesn not wrap anymore*/
+        align-items: center;
+    }
+    
+    #dotWrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 2px;
+    }
+    
+    #dotWrap:hover {
+        cursor: pointer;
+    }
+    
+    .dot {
+        border-radius: 100%;
+        background-color: rgb(80, 80, 80);
+        height: 5px;
+        width: 5px;
+        margin: 1px;
+    }
+    
+    .title {
+        padding: 2px 5px;
+        margin: 2px;
+        font-size: 0.8rem;
+        width: auto;
+        border-radius: 1em;
+        white-space: nowrap;
+    }
+    
+    .topicWrap {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #pfWrap {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        min-width: 226px;
+    }
+    
+    #funcWrap {
+        display: flex;
+        align-items: center;
+    }
+    
+    .func {
+        height: 50px;
+        padding: 7px;
+        margin: 5px;
+        border: solid rgb(255, 78, 160) 2px;
+        border-radius: 25%;
+    }
+    
+    .func:hover {
+        cursor: pointer;
+    }
+    
+    #wrapP {
+        display: grid;
+        grid-template-rows: 90px 1fr 500px 75px;
+        grid-template-areas: "." "mp" "fo" ".";
+        background-color: rgb(42, 42, 42);
+        min-width: 370px;
+    }
+    
+    #mainPreview {
+        grid-area: mp;
+        padding: 5px;
+    }
+    
+    #discDesc {
+        padding: 0 10px;
+    }
+    
+    #roomActive {
+        grid-area: ra;
+        margin: 20px 0;
+    }
+    
+    #roomConcluded {
+        grid-area: rc;
+        margin: 20px 0;
+    }
+    
+    .descriptionP {
+        margin-top: 0.5rem;
+    }
+    
+    .descriptionR {
+        width: 67%;
+    }
+    
+    .titleWrapT2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        height: fit-content;
+        width: 33%;
+    }
+    
+    .titleWrapT {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 0.8rem;
+    }
+    
+    #authorDate {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: rgb(80, 80, 80);
+    }
+    
+    .room {
+        padding: 1rem;
+        background-color: rgb(33, 33, 33);
+        border: solid rgb(42, 42, 42);
+        display: flex;
+    }
+    
+    @media screen and (min-width:800px) {
+        #burger {
+            display: none;
+        }
+        #nav_links {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: transparent;
+            position: static;
+            height: auto;
+        }
+        nav {
+            width: 100%;
+        }
+        #logga:hover {
+            filter: grayscale(40%);
+        }
+        #wrapI {
+            grid-template-rows: 60px 70vh 1fr 250px 75px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: ". . ." "we we we" "ns fy ht" "fo fo fo" ". . .";
+        }
+        hr {
+            display: none;
+        }
+        #dotWrap {
+            display: none;
+        }
+        #rooms {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "ra rc";
+        }
+        #wrapP {
+            grid-template-rows: 90px 1fr 250px 75px;
+        }
+        #zedditHead {
+            padding: 20px;
+        }
+    }
