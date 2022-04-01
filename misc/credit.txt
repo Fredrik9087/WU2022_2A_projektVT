@@ -5,3 +5,5 @@ book: https://www.vecteezy.com/free-vector/abstract
 wave: https://www.vecteezy.com/free-vector/hand-wave-icon
 add: https://www.vecteezy.com/free-vector/add
 crown: https://www.vecteezy.com/free-vector/crown
+chalkboard: Photo by Dan Gold on https://unsplash.com/s/photos/chalkboard?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+  
