@@ -141,6 +141,7 @@
         align-self: center;
         padding: 1rem;
         cursor: pointer;
+        margin: 1rem;
     }
     
     .crossed_line #line1 {
@@ -179,16 +180,22 @@
         background: rgb(42, 42, 42, 0.8);
     }
     
+    #searchbar::placeholder {
+        color: rgba(220, 220, 220);
+    }
+    
     .searchbarH {
-        font-size: 1rem;
+        font-size: 1.3rem;
         color: black;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 0.8);
         outline: none;
         border: none;
         border: solid rgb(0, 0, 0) 2px;
+        border-radius: 1rem;
         width: 100%;
         cursor: text;
         position: absolute;
+        margin: .3rem;
         top: 60px;
         padding: 5px;
         left: 0;
@@ -231,7 +238,8 @@
         display: grid;
         grid-template-rows: 60px 70vh 1fr 1fr 1fr 500px 75px;
         grid-template-areas: "." "we" "ns" "fy" "ht" "fo" ".";
-        background-color: rgb(42, 42, 42);
+        background: rgb(42, 42, 42);
+        /*background: linear-gradient(black, red, blue); på about us!!*/
         min-width: 370px;
     }
     
@@ -292,10 +300,11 @@
     
     #hello {
         padding: 1rem;
+        margin: 1rem;
         text-align: center;
         background-color: rgb(42, 42, 42, 0.8);
         font-family: Calligraffitti;
-        border-radius: 20%;
+        border-radius: 2rem;
     }
     
     .side {
@@ -456,6 +465,30 @@
         background-color: rgb(33, 33, 33);
         border: solid rgb(42, 42, 42);
         display: flex;
+    }
+    
+    #platform {}
+    
+    #inputWrap {
+        position: absolute;
+        top: -50px;
+        /*Vill egentligen ha top: -height;*/
+        height: 50px;
+        width: 100%;
+    }
+    
+    .inputDisc {
+        font-size: 1.3rem;
+        color: black;
+        background-color: rgba(220, 220, 220);
+        outline: none;
+        border: none;
+        border: solid rgb(0, 0, 0) 2px;
+        border-radius: 1rem;
+        width: 90%;
+        cursor: text;
+        position: absolute;
+        padding: 5px;
     }
     
     @media screen and (min-width:800px) {
