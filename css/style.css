@@ -491,6 +491,45 @@
         padding: 5px;
     }
     
+    #wrapA {
+        background-color: rgb(42, 42, 42);
+        display: grid;
+        grid-template-rows: 60px 100px 1fr 1fr 1fr 1fr 500px 75px;
+        grid-template-areas: "." "h" "a" "b" "c" "d" "fo" ".";
+    }
+    
+    .imgWrapAb {
+        height: 300px;
+    }
+    
+    .imgAb {
+        object-fit: contain;
+    }
+    
+    #titleAb {
+        grid-area: h;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    #soWhatIf {
+        grid-area: a;
+    }
+    
+    #startingUp {
+        grid-area: b;
+    }
+    
+    #response {
+        grid-area: c;
+    }
+    
+    #andSo {
+        grid-area: d;
+    }
+    
     @media screen and (min-width:800px) {
         #burger {
             display: none;
