@@ -73,7 +73,7 @@
     header {
         position: fixed;
         background: rgb(24, 24, 24);
-        max-height: 8vh;
+        max-height: 8%;
         min-height: 60px;
         width: 100%;
         padding: 20px;
@@ -236,7 +236,7 @@
     
     #wrapI {
         display: grid;
-        grid-template-rows: 60px 70vh 1fr 1fr 1fr 500px 75px;
+        grid-template-rows: 60px 70% 1fr 1fr 1fr 500px 75px;
         grid-template-areas: "." "we" "ns" "fy" "ht" "fo" ".";
         background: rgb(42, 42, 42);
         /*background: linear-gradient(black, red, blue); på about us!!*/
@@ -494,24 +494,28 @@
     #wrapA {
         background-color: rgb(42, 42, 42);
         display: grid;
-        grid-template-rows: 60px 100px 1fr 1fr 1fr 1fr 500px 75px;
-        grid-template-areas: "." "h" "a" "b" "c" "d" "fo" ".";
-    }
-    
-    .imgWrapAb {
-        height: 300px;
+        grid-template-rows: 60px 1fr 1fr 1fr 1fr 500px 75px;
+        grid-template-areas: "." "a" "b" "c" "d" "fo" ".";
+        width: 100%;
     }
     
     .imgAb {
-        object-fit: contain;
+        object-fit: cover;
+        height: 250px;
+        width: 100%;
     }
     
-    #titleAb {
-        grid-area: h;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+    .titleAb {
+        font-size: 1.85rem;
+        font-family: serif;
+        padding: 1.2rem;
+        padding-bottom: 0;
+    }
+    
+    .pAb {
+        font-size: .9rem;
+        padding: 1.2rem;
+        padding-bottom: 2rem;
     }
     
     #soWhatIf {
@@ -550,7 +554,7 @@
             filter: grayscale(40%);
         }
         #wrapI {
-            grid-template-rows: 60px 70vh 1fr 250px 75px;
+            grid-template-rows: 60px 70% 1fr 250px 75px;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-areas: ". . ." "we we we" "ns fy ht" "fo fo fo" ". . .";
         }
