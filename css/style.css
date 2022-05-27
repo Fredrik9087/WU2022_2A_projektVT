@@ -5,10 +5,15 @@
         padding: 0;
         text-decoration: none;
         max-width: 100%;
-        color: seashell;
+        color: white;
         cursor: default;
         list-style: none;
         font-family: sans-serif;
+        z-index: 1;
+    }
+    
+    body {
+        background-color: rgb(42, 42, 42);
     }
     
     a {
@@ -80,6 +85,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 2;
     }
     
     #logga {
@@ -130,6 +136,11 @@
         transition: all 0.3s;
     }
     
+    .burger_line:hover {
+        cursor: pointer;
+        color: grey;
+    }
+    
     #burger {
         cursor: pointer;
     }
@@ -163,7 +174,7 @@
         justify-content: center;
         align-items: center;
         background-image: url("../img/Chalkboard.jpg");
-        background-size: cover;
+        object-fit: cover;
         margin-bottom: 1rem;
     }
     
@@ -236,11 +247,9 @@
     
     #wrapI {
         display: grid;
-        grid-template-rows: 60px 70% 1fr 1fr 1fr 500px 75px;
+        grid-template-rows: 60px 600px auto auto auto 500px 75px;
         grid-template-areas: "." "we" "ns" "fy" "ht" "fo" ".";
         background: rgb(42, 42, 42);
-        /*background: linear-gradient(black, red, blue); på about us!!*/
-        min-width: 370px;
     }
     
     .underline {
@@ -258,8 +267,9 @@
     }
     
     p {
-        font-size: 0.8rem;
-        color: rgb(200, 200, 200);
+        font-size: 1.1rem;
+        color: rgb(230, 230, 230);
+        line-height: 1.4rem;
     }
     
     h1 {
@@ -314,6 +324,7 @@
     .sideP {
         margin-left: .5rem;
         margin-bottom: 0.5rem;
+        color: rgb(180, 180, 180);
     }
     
     #profile {
@@ -335,15 +346,16 @@
     
     #pfName {
         align-self: flex-end;
-        margin: 8px 5px 8px 15px;
+        margin: 8px 5px;
+        font-size: 1.2rem;
     }
     
     .titleWrapP {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        /* if  there is flexwrap, then titles disappear untill flex doesn not wrap anymore*/
         align-items: center;
+        position: relative;
     }
     
     #dotWrap {
@@ -385,6 +397,7 @@
         justify-content: space-between;
         width: 100%;
         min-width: 226px;
+        position: relative;
     }
     
     #funcWrap {
@@ -467,17 +480,20 @@
         display: flex;
     }
     
-    #platform {}
+    #platform {
+        background-color: rgb(42, 42, 42);
+        grid-area: discussion;
+    }
     
     #inputWrap {
         position: absolute;
         top: -50px;
-        /*Vill egentligen ha top: -height;*/
+        left: -25px;
         height: 50px;
         width: 100%;
     }
     
-    .inputDisc {
+    #inputDisc {
         font-size: 1.3rem;
         color: black;
         background-color: rgba(220, 220, 220);
@@ -485,53 +501,251 @@
         border: none;
         border: solid rgb(0, 0, 0) 2px;
         border-radius: 1rem;
-        width: 90%;
+        width: 100%;
         cursor: text;
-        position: absolute;
         padding: 5px;
+    }
+    
+    #inputDisc::placeholder {
+        color: black;
     }
     
     #wrapA {
         background-color: rgb(42, 42, 42);
         display: grid;
-        grid-template-rows: 60px 1fr 1fr 1fr 1fr 500px 75px;
+        grid-template-rows: 60px auto auto auto auto 500px 75px;
         grid-template-areas: "." "a" "b" "c" "d" "fo" ".";
         width: 100%;
+    }
+    
+    .imgAbEnd {
+        object-fit: cover;
+        height: 250px;
+        width: 100%;
+        margin-top: 2rem;
     }
     
     .imgAb {
         object-fit: cover;
         height: 250px;
         width: 100%;
+        margin-top: 2rem;
+        position: relative;
     }
     
     .titleAb {
-        font-size: 1.85rem;
+        font-size: 2rem;
         font-family: serif;
         padding: 1.2rem;
-        padding-bottom: 0;
+        padding-top: 1.5rem;
+        padding-bottom: 1.2;
     }
     
     .pAb {
-        font-size: .9rem;
-        padding: 1.2rem;
-        padding-bottom: 2rem;
+        padding-left: 1.8rem;
+        padding-right: 1.2rem;
+        padding-top: 0;
+        padding-bottom: 1rem;
+    }
+    
+    .message .pAb {
+        padding-left: 4rem;
     }
     
     #soWhatIf {
         grid-area: a;
+        height: auto;
+        padding: 50px 0;
+        background: linear-gradient(to bottom, rgb(56, 56, 56), rgb(56, 56, 56) 85%, rgb(49, 49, 49) 100%);
     }
     
     #startingUp {
+        padding: 50px 0;
+        height: auto;
         grid-area: b;
+        background: linear-gradient(to bottom, rgb(49, 49, 49), rgb(42, 42, 42) 15%, rgb(42, 42, 42) 85%, rgb(49, 49, 49) 100%);
     }
     
     #response {
+        height: auto;
+        padding: 50px 0;
         grid-area: c;
+        background: linear-gradient(to bottom, rgb(49, 49, 49), rgb(56, 56, 56) 15%, rgb(56, 56, 56) 85%, rgb(49, 49, 49) 100%);
     }
     
     #andSo {
+        padding-top: 75px;
+        height: auto;
         grid-area: d;
+        background: linear-gradient(to bottom, rgb(49, 49, 49), rgb(42, 42, 42) 85%);
+    }
+    
+    .collageA {
+        position: absolute;
+        object-fit: cover;
+        height: 100%;
+        width: 35%;
+    }
+    
+    #collageA1 {
+        left: 0;
+    }
+    
+    #collageA2 {
+        left: 35%;
+    }
+    
+    #collageA3 {
+        left: 70%;
+    }
+    
+    .collage {
+        position: absolute;
+        height: 50%;
+        width: 40%;
+        object-fit: cover;
+        top: 5%;
+        left: 20%;
+    }
+    
+    #collage1 {
+        z-index: 0;
+    }
+    
+    #collage2 {
+        transform: rotate(30deg);
+        z-index: -1;
+        left: -10%;
+        top: 65%;
+    }
+    
+    #collage3 {
+        transform: rotate(-20deg);
+        z-index: -2;
+        left: -15%;
+        top: 10%;
+    }
+    
+    #collage4 {
+        transform: rotate(18deg);
+        z-index: -3;
+        top: 0;
+        left: 50%;
+    }
+    
+    #collage5 {
+        transform: rotate(-20deg);
+        z-index: -5;
+        left: 45%;
+        top: 25%;
+    }
+    
+    #collage6 {
+        transform: rotate(12deg);
+        z-index: -4;
+        left: 40%;
+        top: 75%;
+    }
+    
+    #collage7 {
+        transform: rotate(-22deg);
+        z-index: -6;
+        top: 90%;
+        left: 5%;
+    }
+    
+    #collage8 {
+        transform: rotate(-22deg);
+        z-index: -6;
+        top: 50%;
+        left: 5%;
+    }
+    
+    #collage9 {
+        transform: rotate(45deg);
+        z-index: -6;
+        top: 45%;
+        left: 60%;
+    }
+    
+    #collage10 {
+        transform: rotate(45deg);
+        z-index: -6;
+        top: 60%;
+        left: 50%;
+    }
+    
+    #collage11 {
+        transform: rotate(-10deg);
+        z-index: -6;
+        top: 30%;
+        left: -10%;
+    }
+    
+    #discWrap {
+        display: grid;
+        grid-template-rows: 120px auto 130px;
+        grid-template-areas: "." "discussion" ".";
+    }
+    
+    .sender {
+        display: flex;
+        align-items: center;
+    }
+    
+    .pfp {
+        height: 70px;
+        padding: 10px;
+    }
+    
+    .pfName {
+        font-size: 1.5rem;
+    }
+    
+    #arrow {
+        position: fixed;
+        bottom: 130px;
+        border-radius: 0 30px 30px 0;
+        border: solid rgb(255, 78, 160) 2px;
+        background-color: rgba(24, 24, 24);
+        border-left: none;
+        height: 60px;
+        width: 2.8rem;
+        z-index: 2;
+    }
+    
+    #arrow:hover {
+        cursor: pointer;
+    }
+    
+    .arrowCrossed #line4 {
+        transform: rotate(-45deg) translate(-20px, 20px);
+    }
+    
+    .arrowCrossed #line5 {
+        transform: rotate(-45deg) translate(-20px, 20px);
+    }
+    
+    #line4 {
+        transform: rotate(-45deg) translate(-20px, 20px);
+        width: 25px;
+    }
+    
+    #line5 {
+        transform: rotate(45deg) translate(2px, 2px);
+        width: 25px;
+    }
+    
+    #discNav {
+        position: fixed;
+        height: 100%;
+        width: 70%;
+        background-color: rgba(24, 24, 24, 0.8);
+        z-index: 2;
+    }
+    
+    .discNavActive {
+        transform: translateX();
     }
     
     @media screen and (min-width:800px) {
@@ -554,7 +768,7 @@
             filter: grayscale(40%);
         }
         #wrapI {
-            grid-template-rows: 60px 70% 1fr 250px 75px;
+            grid-template-rows: 60px 70% auto 250px 75px;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-areas: ". . ." "we we we" "ns fy ht" "fo fo fo" ". . .";
         }
@@ -574,5 +788,43 @@
         }
         #zedditHead {
             padding: 20px;
+        }
+        .artAbA {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .artAbB {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .artAbC {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .artAbC .textAb {
+            width: 70%;
+            text-align: center;
+        }
+        .textAb {
+            width: 45%;
+        }
+        .imgAb {
+            width: 30%;
+            object-fit: cover;
+            height: 100%;
+        }
+        #wrapA {
+            grid-template-rows: 60px auto auto auto auto 250px 75px;
+        }
+        .collage {
+            height: 20%;
+            width: 60%;
+            top: 40%;
+            left: 15%;
         }
     }
