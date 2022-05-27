@@ -1,830 +1,956 @@
-    @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
-        max-width: 100%;
-        color: white;
-        cursor: default;
-        list-style: none;
-        font-family: sans-serif;
-        z-index: 1;
-    }
-    
-    body {
-        background-color: rgb(42, 42, 42);
-    }
-    
-    a {
-        cursor: pointer;
-    }
-    
-    a h3 {
-        cursor: pointer;
-    }
-    
-    a img {
-        cursor: pointer;
-    }
-    
-    footer {
-        grid-area: fo;
-        background: rgb(33, 33, 33);
-        display: flex;
-        align-items: center;
-    }
-    
-    #zedditHead {
-        padding-top: 20px;
-        width: 100%;
-    }
-    
-    #tm {
-        text-decoration: underline;
-        font-size: 0.7rem;
-        justify-self: flex-start;
-    }
-    
-    #catWrap {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        min-width: 260px;
-        width: 100%;
-    }
-    
-    .footerCat {
-        height: 20%;
-        padding: 10px;
-    }
-    
-    .footerCat li {
-        font-size: 0.8rem;
-        color: rgb(255, 78, 160);
-        cursor: pointer;
-        margin: 5px;
-    }
-    
-    #neverStop {
-        min-width: 110px;
-        max-width: 110px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-    }
-    
-    header {
-        position: fixed;
-        background: rgb(24, 24, 24);
-        max-height: 8%;
-        min-height: 60px;
-        width: 100%;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 2;
-    }
-    
-    #logga {
-        height: 25px;
-    }
-    
-    #nav_links {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        background-color: rgba(24, 24, 24, 0.8);
-        /*fixa blur ksk*/
-        position: absolute;
-        padding: 10px;
-        right: 0;
-        height: 175px;
-        top: -200px;
-        transition: all 0.4s;
-    }
-    
-    .nav_active {
-        transform: translateY(260px);
-    }
-    
-    #nav_links li {
-        display: flex;
-        justify-content: flex-end;
-    }
-    
-    #nav_links a {
-        letter-spacing: 0.1rem;
-        font-weight: bold;
-        font-size: 1.25rem;
-        margin-left: 10px;
-    }
-    
-    #nav_links a:hover {
-        color: grey;
-        transition: ease 0.3s;
-    }
-    
-    .burger_line {
-        background-color: seashell;
-        height: 4px;
-        width: 35px;
-        margin: 6px;
-        border-radius: 10%;
-        transition: all 0.3s;
-    }
-    
-    .burger_line:hover {
-        cursor: pointer;
-        color: grey;
-    }
-    
-    #burger {
-        cursor: pointer;
-    }
-    
-    .seeMore {
-        color: rgb(255, 78, 160);
-        border: solid rgb(255, 78, 160) 3px;
-        border-radius: 1em;
-        align-self: center;
-        padding: 1rem;
-        cursor: pointer;
-        margin: 1rem;
-    }
-    
-    .crossed_line #line1 {
-        transform: rotate(-45deg) translate(-8px, 6px);
-    }
-    
-    .crossed_line #line2 {
-        opacity: 0;
-    }
-    
-    .crossed_line #line3 {
-        transform: rotate(45deg) translate(-8px, -6px);
-    }
-    
-    #welcome {
-        grid-area: we;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-image: url("../img/Chalkboard.jpg");
-        object-fit: cover;
-        margin-bottom: 1rem;
-    }
-    
-    #searchbar {
-        font-size: 1rem;
-        background-color: transparent;
-        outline: none;
-        border: none;
-        border-bottom: solid rgb(255, 78, 160) 2px;
-        margin-bottom: 2rem;
-        padding: .5rem;
-        width: 280px;
-        cursor: text;
-        background: rgb(42, 42, 42, 0.8);
-    }
-    
-    #searchbar::placeholder {
-        color: rgba(220, 220, 220);
-    }
-    
-    .searchbarH {
-        font-size: 1.3rem;
-        color: black;
-        background-color: rgba(255, 255, 255, 0.8);
-        outline: none;
-        border: none;
-        border: solid rgb(0, 0, 0) 2px;
-        border-radius: 1rem;
-        width: 100%;
-        cursor: text;
-        position: absolute;
-        margin: .3rem;
-        top: 60px;
-        padding: 5px;
-        left: 0;
-    }
-    
-    .searchbarH::placeholder {
-        color: black;
-    }
-    
-    #news {
-        grid-area: ns;
-        padding-left: 0.3rem;
-    }
-    
-    #forYou {
-        grid-area: fy;
-        padding-left: 0.3rem;
-    }
-    
-    #hotTopics {
-        grid-area: ht;
-        padding-left: 0.3rem;
-    }
-    
-    .add {
-        width: 10px;
-    }
-    
-    .topic {
-        padding: .3rem;
-        margin: 5px 1rem;
-        cursor: pointer;
-    }
-    
-    .topic:hover {
-        background-color: rgb(80, 80, 80);
-    }
-    
-    #wrapI {
-        display: grid;
-        grid-template-rows: 60px 600px auto auto auto 500px 75px;
-        grid-template-areas: "." "we" "ns" "fy" "ht" "fo" ".";
-        background: rgb(42, 42, 42);
-    }
-    
-    .underline {
-        border-bottom: solid rgb(255, 78, 160) 1px;
-    }
-    
-    hr {
-        justify-self: flex-end;
-        height: 1px;
-        width: 100%;
-        border: 0;
-        border-top: 2px solid rgb(80, 80, 80);
-        margin: 1rem 0;
-        padding: 0;
-    }
-    
-    p {
-        font-size: 1.1rem;
-        color: rgb(230, 230, 230);
-        line-height: 1.4rem;
-    }
-    
-    h1 {
-        font-size: 3rem;
-        font-family: serif;
-    }
-    
-    h2 {
-        font-size: 1.85rem;
-        font-family: serif;
-    }
-    
-    h2 span {
-        font-size: 1.85rem;
-        font-family: serif;
-    }
-    
-    h3 {
-        font-size: 1.14rem;
-        font-weight: normal;
-        font-family: serif;
-    }
-    
-    h3 span {
-        font-size: 1.14rem;
-        font-weight: normal;
-        font-family: serif;
-        cursor: pointer;
-    }
-    
-    #DiscH {
-        margin: 30px 0 20px;
-    }
-    
-    .footerH {
-        font-weight: bold;
-    }
-    
-    #hello {
-        padding: 1rem;
-        margin: 1rem;
-        text-align: center;
-        background-color: rgb(42, 42, 42, 0.8);
-        font-family: Calligraffitti;
-        border-radius: 2rem;
-    }
-    
-    .side {
-        margin-left: .5rem;
-    }
-    
-    .sideP {
-        margin-left: .5rem;
-        margin-bottom: 0.5rem;
-        color: rgb(180, 180, 180);
-    }
-    
-    #profile {
-        background: rgb(24, 24, 24);
-        height: 75px;
-        border-top: solid 2px;
-        position: fixed;
-        width: 100%;
-        bottom: 0;
-        display: flex;
-    }
-    
-    #pfp {
-        height: 80px;
-        position: absolute;
-        left: 15px;
-        top: -40px;
-    }
-    
-    #pfName {
-        align-self: flex-end;
-        margin: 8px 5px;
-        font-size: 1.2rem;
-    }
-    
-    .titleWrapP {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: center;
-        position: relative;
-    }
-    
-    #dotWrap {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-left: 2px;
-    }
-    
-    #dotWrap:hover {
-        cursor: pointer;
-    }
-    
-    .dot {
-        border-radius: 100%;
-        background-color: rgb(80, 80, 80);
-        height: 5px;
-        width: 5px;
-        margin: 1px;
-    }
-    
-    .title {
-        padding: 2px 5px;
-        margin: 2px;
-        font-size: 0.8rem;
-        width: auto;
-        border-radius: 1em;
-        white-space: nowrap;
-    }
-    
-    .topicWrap {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    #pfWrap {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        min-width: 226px;
-        position: relative;
-    }
-    
-    #funcWrap {
-        display: flex;
-        align-items: center;
-    }
-    
-    .func {
-        height: 50px;
-        padding: 7px;
-        margin: 5px;
-        border: solid rgb(255, 78, 160) 2px;
-        border-radius: 25%;
-    }
-    
-    .func:hover {
-        cursor: pointer;
-    }
-    
-    #wrapP {
-        display: grid;
-        grid-template-rows: 90px 1fr 500px 75px;
-        grid-template-areas: "." "mp" "fo" ".";
-        background-color: rgb(42, 42, 42);
-        min-width: 370px;
-    }
-    
-    #mainPreview {
-        grid-area: mp;
-        padding: 5px;
-    }
-    
-    #discDesc {
-        padding: 0 10px;
-    }
-    
-    #roomActive {
-        grid-area: ra;
-        margin: 20px 0;
-    }
-    
-    #roomConcluded {
-        grid-area: rc;
-        margin: 20px 0;
-    }
-    
-    .descriptionP {
-        margin-top: 0.5rem;
-    }
-    
-    .descriptionR {
-        width: 67%;
-    }
-    
-    .titleWrapT2 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        height: fit-content;
-        width: 33%;
-    }
-    
-    .titleWrapT {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-top: 0.8rem;
-    }
-    
-    #authorDate {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: rgb(80, 80, 80);
-    }
-    
-    .room {
-        padding: 1rem;
-        background-color: rgb(33, 33, 33);
-        border: solid rgb(42, 42, 42);
-        display: flex;
-    }
-    
-    #platform {
-        background-color: rgb(42, 42, 42);
-        grid-area: discussion;
-    }
-    
-    #inputWrap {
-        position: absolute;
-        top: -50px;
-        left: -25px;
-        height: 50px;
-        width: 100%;
-    }
-    
-    #inputDisc {
-        font-size: 1.3rem;
-        color: black;
-        background-color: rgba(220, 220, 220);
-        outline: none;
-        border: none;
-        border: solid rgb(0, 0, 0) 2px;
-        border-radius: 1rem;
-        width: 100%;
-        cursor: text;
-        padding: 5px;
-    }
-    
-    #inputDisc::placeholder {
-        color: black;
-    }
-    
-    #wrapA {
-        background-color: rgb(42, 42, 42);
-        display: grid;
-        grid-template-rows: 60px auto auto auto auto 500px 75px;
-        grid-template-areas: "." "a" "b" "c" "d" "fo" ".";
-        width: 100%;
-    }
-    
-    .imgAbEnd {
-        object-fit: cover;
-        height: 250px;
-        width: 100%;
-        margin-top: 2rem;
-    }
-    
-    .imgAb {
-        object-fit: cover;
-        height: 250px;
-        width: 100%;
-        margin-top: 2rem;
-        position: relative;
-    }
-    
-    .titleAb {
-        font-size: 2rem;
-        font-family: serif;
-        padding: 1.2rem;
-        padding-top: 1.5rem;
-        padding-bottom: 1.2;
-    }
-    
-    .pAb {
-        padding-left: 1.8rem;
-        padding-right: 1.2rem;
-        padding-top: 0;
-        padding-bottom: 1rem;
-    }
-    
-    .message .pAb {
-        padding-left: 4rem;
-    }
-    
-    #soWhatIf {
-        grid-area: a;
-        height: auto;
-        padding: 50px 0;
-        background: linear-gradient(to bottom, rgb(56, 56, 56), rgb(56, 56, 56) 85%, rgb(49, 49, 49) 100%);
-    }
-    
-    #startingUp {
-        padding: 50px 0;
-        height: auto;
-        grid-area: b;
-        background: linear-gradient(to bottom, rgb(49, 49, 49), rgb(42, 42, 42) 15%, rgb(42, 42, 42) 85%, rgb(49, 49, 49) 100%);
-    }
-    
-    #response {
-        height: auto;
-        padding: 50px 0;
-        grid-area: c;
-        background: linear-gradient(to bottom, rgb(49, 49, 49), rgb(56, 56, 56) 15%, rgb(56, 56, 56) 85%, rgb(49, 49, 49) 100%);
-    }
-    
-    #andSo {
-        padding-top: 75px;
-        height: auto;
-        grid-area: d;
-        background: linear-gradient(to bottom, rgb(49, 49, 49), rgb(42, 42, 42) 85%);
-    }
-    
-    .collageA {
-        position: absolute;
-        object-fit: cover;
-        height: 100%;
-        width: 35%;
-    }
-    
-    #collageA1 {
-        left: 0;
-    }
-    
-    #collageA2 {
-        left: 35%;
-    }
-    
-    #collageA3 {
-        left: 70%;
-    }
-    
-    .collage {
-        position: absolute;
-        height: 50%;
-        width: 40%;
-        object-fit: cover;
-        top: 5%;
-        left: 20%;
-    }
-    
-    #collage1 {
-        z-index: 0;
-    }
-    
-    #collage2 {
-        transform: rotate(30deg);
-        z-index: -1;
-        left: -10%;
-        top: 65%;
-    }
-    
-    #collage3 {
-        transform: rotate(-20deg);
-        z-index: -2;
-        left: -15%;
-        top: 10%;
-    }
-    
-    #collage4 {
-        transform: rotate(18deg);
-        z-index: -3;
-        top: 0;
-        left: 50%;
-    }
-    
-    #collage5 {
-        transform: rotate(-20deg);
-        z-index: -5;
-        left: 45%;
-        top: 25%;
-    }
-    
-    #collage6 {
-        transform: rotate(12deg);
-        z-index: -4;
-        left: 40%;
-        top: 75%;
-    }
-    
-    #collage7 {
-        transform: rotate(-22deg);
-        z-index: -6;
-        top: 90%;
-        left: 5%;
-    }
-    
-    #collage8 {
-        transform: rotate(-22deg);
-        z-index: -6;
-        top: 50%;
-        left: 5%;
-    }
-    
-    #collage9 {
-        transform: rotate(45deg);
-        z-index: -6;
-        top: 45%;
-        left: 60%;
-    }
-    
-    #collage10 {
-        transform: rotate(45deg);
-        z-index: -6;
-        top: 60%;
-        left: 50%;
-    }
-    
-    #collage11 {
-        transform: rotate(-10deg);
-        z-index: -6;
-        top: 30%;
-        left: -10%;
-    }
-    
-    #discWrap {
-        display: grid;
-        grid-template-rows: 120px auto 130px;
-        grid-template-areas: "." "discussion" ".";
-    }
-    
-    .sender {
-        display: flex;
-        align-items: center;
-    }
-    
-    .pfp {
-        height: 70px;
-        padding: 10px;
-    }
-    
-    .pfName {
-        font-size: 1.5rem;
-    }
-    
-    #arrow {
-        position: fixed;
-        bottom: 130px;
-        border-radius: 0 30px 30px 0;
-        border: solid rgb(255, 78, 160) 2px;
-        background-color: rgba(24, 24, 24);
-        border-left: none;
-        height: 60px;
-        width: 2.8rem;
-        z-index: 2;
-    }
-    
-    #arrow:hover {
-        cursor: pointer;
-    }
-    
-    .arrowCrossed #line4 {
-        transform: rotate(-45deg) translate(-20px, 20px);
-    }
-    
-    .arrowCrossed #line5 {
-        transform: rotate(-45deg) translate(-20px, 20px);
-    }
-    
-    #line4 {
-        transform: rotate(-45deg) translate(-20px, 20px);
-        width: 25px;
-    }
-    
-    #line5 {
-        transform: rotate(45deg) translate(2px, 2px);
-        width: 25px;
-    }
-    
-    #discNav {
-        position: fixed;
-        height: 100%;
-        width: 70%;
-        background-color: rgba(24, 24, 24, 0.8);
-        z-index: 2;
-    }
-    
-    .discNavActive {
-        transform: translateX();
-    }
-    
-    @media screen and (min-width:800px) {
-        #burger {
+        @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            max-width: 100%;
+            color: white;
+            cursor: default;
+            list-style: none;
+            font-family: sans-serif;
+            z-index: 1;
+        }
+        
+        details summary::-webkit-details-marker {
             display: none;
         }
-        #nav_links {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-            background-color: transparent;
-            position: static;
-            height: auto;
+        
+        body {
+            background-color: rgb(42, 42, 42);
         }
-        nav {
+        
+        a {
+            cursor: pointer;
+        }
+        
+        a h3 {
+            cursor: pointer;
+        }
+        
+        a img {
+            cursor: pointer;
+        }
+        
+        footer {
+            grid-area: fo;
+            background: rgb(33, 33, 33);
+            display: flex;
+            align-items: center;
+        }
+        
+        #zedditHead {
+            padding-top: 20px;
             width: 100%;
         }
-        #logga:hover {
-            filter: grayscale(40%);
+        
+        #tm {
+            text-decoration: underline;
+            font-size: 0.7rem;
+            justify-self: flex-start;
         }
-        #wrapI {
-            grid-template-rows: 60px 70% auto 250px 75px;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-areas: ". . ." "we we we" "ns fy ht" "fo fo fo" ". . .";
+        
+        #catWrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            min-width: 260px;
+            width: 100%;
         }
-        hr {
-            display: none;
+        
+        .footerCat {
+            height: 20%;
+            padding: 10px;
         }
-        #dotWrap {
-            display: none;
+        
+        .footerCat li {
+            font-size: 0.8rem;
+            color: rgb(255, 78, 160);
+            cursor: pointer;
+            margin: 5px;
         }
-        #rooms {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: "ra rc";
+        
+        #neverStop {
+            min-width: 110px;
+            max-width: 110px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
         }
-        #wrapP {
-            grid-template-rows: 90px 1fr 250px 75px;
-        }
-        #zedditHead {
+        
+        header {
+            position: fixed;
+            background: rgb(24, 24, 24);
+            max-height: 8%;
+            min-height: 60px;
+            width: 100%;
             padding: 20px;
-        }
-        .artAbA {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
+            z-index: 4;
         }
-        .artAbB {
+        
+        #logga {
+            height: 25px;
+        }
+        
+        #nav_links {
             display: flex;
-            flex-direction: row-reverse;
+            flex-direction: column;
             justify-content: space-around;
-            align-items: center;
+            background-color: rgba(24, 24, 24, 0.8);
+            position: absolute;
+            padding: 10px;
+            right: 0;
+            height: 175px;
+            top: -200px;
+            transition: all 0.4s;
         }
-        .artAbC {
+        
+        .nav_active {
+            transform: translateY(260px);
+        }
+        
+        #nav_links li {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        #nav_links a {
+            letter-spacing: 0.1rem;
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin-left: 10px;
+        }
+        
+        #nav_links a:hover {
+            color: grey;
+            transition: ease 0.3s;
+        }
+        
+        .burger_line {
+            background-color: seashell;
+            height: 4px;
+            width: 35px;
+            margin: 6px;
+            border-radius: 10%;
+            transition: all 0.3s;
+        }
+        
+        .burger_line:hover {
+            cursor: pointer;
+            color: grey;
+        }
+        
+        #burger {
+            cursor: pointer;
+        }
+        
+        .seeMore {
+            color: rgb(255, 78, 160);
+            border: solid rgb(255, 78, 160) 3px;
+            border-radius: 1em;
+            align-self: center;
+            padding: 1rem;
+            cursor: pointer;
+            margin: 1rem;
+            font-size: .9rem;
+        }
+        
+        .crossed_line #line1 {
+            transform: rotate(-45deg) translate(-8px, 6px);
+        }
+        
+        .crossed_line #line2 {
+            opacity: 0;
+        }
+        
+        .crossed_line #line3 {
+            transform: rotate(45deg) translate(-8px, -6px);
+        }
+        
+        #welcome {
+            grid-area: we;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-image: url("../img/Chalkboard.jpg");
+            object-fit: cover;
+            margin-bottom: 1rem;
         }
-        .artAbC .textAb {
-            width: 70%;
+        
+        #searchbar {
+            font-size: 1rem;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            border-bottom: solid rgb(255, 78, 160) 2px;
+            margin-bottom: 2rem;
+            padding: .5rem;
+            width: 280px;
+            cursor: text;
+            background: rgb(42, 42, 42, 0.8);
+        }
+        
+        .searchbarH {
+            transform: translateY(-110px);
+        }
+        
+        #searchbar::placeholder {
+            color: rgba(220, 220, 220);
+        }
+        
+        #searchbarH {
+            font-size: 1.3rem;
+            color: rgb(180, 180, 180);
+            background-color: rgb(24, 24, 24);
+            outline: none;
+            border: solid grey 2px;
+            border-radius: 1rem;
+            cursor: text;
+            padding: 5px;
+            margin: .5rem .75rem;
+            width: calc(100% - 1.5rem);
+        }
+        
+        #searchbarH::placeholder {
+            color: rgb(180, 180, 180);
+        }
+        
+        #searchHCont {
+            background-color: rgb(24, 24, 24);
+            width: 100%;
+            height: 60px;
+            position: absolute;
+            top: 60px;
+            left: 0;
+        }
+        
+        #news {
+            grid-area: ns;
+            padding-left: 0.3rem;
+        }
+        
+        #forYou {
+            grid-area: fy;
+            padding-left: 0.3rem;
+        }
+        
+        #hotTopics {
+            grid-area: ht;
+            padding-left: 0.3rem;
+        }
+        
+        .add {
+            width: 10px;
+        }
+        
+        .topic {
+            padding: .3rem;
+            margin: 5px 1rem;
+            cursor: pointer;
+        }
+        
+        .topic:hover {
+            background-color: rgb(80, 80, 80);
+        }
+        
+        #wrapI {
+            display: grid;
+            grid-template-rows: 60px 600px auto auto auto 500px 75px;
+            grid-template-areas: "." "we" "ns" "fy" "ht" "fo" ".";
+            background: rgb(42, 42, 42);
+        }
+        
+        .underline {
+            border-bottom: solid rgb(255, 78, 160) 1px;
+        }
+        
+        hr {
+            justify-self: flex-end;
+            height: 1px;
+            width: 100%;
+            border: 0;
+            border-top: 2px solid rgb(80, 80, 80);
+            margin: 1rem 0;
+            padding: 0;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            color: rgb(230, 230, 230);
+            line-height: 1.4rem;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-family: serif;
+        }
+        
+        h2 {
+            font-size: 1.85rem;
+            font-family: serif;
+        }
+        
+        h2 span {
+            font-size: 1.85rem;
+            font-family: serif;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            font-weight: normal;
+            font-family: serif;
+        }
+        
+        h3 span {
+            font-size: 1.2rem;
+            font-weight: normal;
+            font-family: serif;
+            cursor: pointer;
+        }
+        
+        #DiscH {
+            margin: 30px 0 20px;
+        }
+        
+        .footerH {
+            font-weight: bold;
+        }
+        
+        #hello {
+            padding: 1rem;
+            margin: 1rem;
             text-align: center;
+            background-color: rgb(42, 42, 42, 0.8);
+            font-family: Calligraffitti;
+            border-radius: 2rem;
         }
-        .textAb {
-            width: 45%;
+        
+        .side {
+            margin-left: .5rem;
         }
+        
+        .sideP {
+            margin-left: .5rem;
+            margin-bottom: 0.5rem;
+            color: rgb(180, 180, 180);
+            font-size: 1rem;
+        }
+        
+        #profile {
+            background: rgb(24, 24, 24);
+            height: 75px;
+            border-top: solid 2px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            display: flex;
+            z-index: 4;
+        }
+        
+        #pfp {
+            height: 80px;
+            position: absolute;
+            left: 15px;
+            top: -40px;
+        }
+        
+        #pfName {
+            align-self: flex-end;
+            margin: 8px 5px;
+            font-size: 1.2rem;
+            font-family: serif;
+        }
+        
+        .titleWrapP {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            position: relative;
+        }
+        
+        #dotWrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-left: 2px;
+        }
+        
+        #dotWrap:hover {
+            cursor: pointer;
+        }
+        
+        .dot {
+            border-radius: 100%;
+            background-color: rgb(80, 80, 80);
+            height: 5px;
+            width: 5px;
+            margin: 1px;
+        }
+        
+        .title {
+            padding: 2px 5px;
+            margin: 2px;
+            font-size: 0.8rem;
+            width: auto;
+            border-radius: 1em;
+            white-space: nowrap;
+        }
+        
+        .topicWrap {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #pfWrap {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            min-width: 226px;
+        }
+        
+        #funcWrap {
+            display: flex;
+            align-items: center;
+        }
+        
+        .func {
+            height: 50px;
+            padding: 7px;
+            margin: 5px;
+            border: solid rgb(255, 78, 160) 2px;
+            border-radius: 25%;
+        }
+        
+        .func:hover {
+            cursor: pointer;
+        }
+        
+        #wrapP {
+            display: grid;
+            grid-template-rows: 90px 1fr 500px 75px;
+            grid-template-areas: "." "mp" "fo" ".";
+            background-color: rgb(42, 42, 42);
+            min-width: 370px;
+        }
+        
+        #mainPreview {
+            grid-area: mp;
+            padding: 5px;
+        }
+        
+        #discDesc {
+            padding: 0 10px;
+        }
+        
+        #roomActive {
+            grid-area: ra;
+            margin: 20px 0;
+        }
+        
+        #roomConcluded {
+            grid-area: rc;
+            margin: 20px 0;
+        }
+        
+        .descriptionP {
+            margin-top: 1rem;
+        }
+        
+        .descriptionR {
+            width: 67%;
+        }
+        
+        .titleWrapT2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            height: fit-content;
+            width: 33%;
+        }
+        
+        .titleWrapT {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 0.8rem;
+        }
+        
+        #authorDate {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: rgb(80, 80, 80);
+        }
+        
+        .room {
+            padding: 1rem;
+            background-color: rgb(33, 33, 33);
+            border: solid rgb(42, 42, 42);
+            display: flex;
+        }
+        
+        #platform {
+            background-color: rgb(42, 42, 42);
+            grid-area: discussion;
+        }
+        
+        #inputWrap {
+            position: fixed;
+            bottom: 75px;
+            padding-left: 100px;
+            height: 60px;
+            width: 100%;
+            background-color: rgb(24, 24, 24);
+        }
+        
+        #inputDisc {
+            font-size: 1.3rem;
+            color: rgb(180, 180, 180);
+            background-color: rgb(24, 24, 24);
+            outline: none;
+            border: none;
+            border: solid grey 2px;
+            border-radius: 1rem;
+            width: calc(100% - 20px);
+            cursor: text;
+            padding: 5px;
+            margin: 10px;
+        }
+        
+        .inputDisc {
+            transform: translateY(200px);
+        }
+        
+        #inputDisc::placeholder {
+            color: rgb(180, 180, 180);
+        }
+        
+        #wrapA {
+            background-color: rgb(42, 42, 42);
+            display: grid;
+            grid-template-rows: 60px 100px auto auto auto auto 500px 75px;
+            grid-template-areas: "." "ha" "a" "b" "c" "d" "fo" ".";
+            width: 100%;
+        }
+        
+        .imgAbEnd {
+            object-fit: cover;
+            height: 250px;
+            width: 100%;
+            margin-top: 2rem;
+        }
+        
         .imgAb {
-            width: 30%;
+            object-fit: cover;
+            height: 250px;
+            width: 100%;
+            margin-top: 2rem;
+            position: relative;
+        }
+        
+        .titleAb {
+            font-size: 2rem;
+            font-family: serif;
+            padding: 1.2rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.2rem;
+        }
+        
+        .pAb {
+            padding-left: 1.8rem;
+            padding-right: 1.2rem;
+            padding-top: 0;
+            padding-bottom: 1rem;
+        }
+        
+        .message .pAb {
+            padding-left: 4rem;
+        }
+        
+        #headAb {
+            grid-area: ha;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, rgb(42, 42, 42) 85%, rgb(49, 49, 49) 100%);
+        }
+        
+        #soWhatIf {
+            grid-area: a;
+            height: auto;
+            padding: 0px 0;
+            background: linear-gradient(to bottom, rgb(49, 49, 49) 15%, rgb(56, 56, 56) 85%, rgb(49, 49, 49) 100%);
+        }
+        
+        #startingUp {
+            padding: 50px 0;
+            height: auto;
+            grid-area: b;
+            background: linear-gradient(to bottom, rgb(49, 49, 49), rgb(42, 42, 42) 15%, rgb(42, 42, 42) 85%, rgb(49, 49, 49) 100%);
+        }
+        
+        #response {
+            height: auto;
+            padding: 50px 0;
+            grid-area: c;
+            background: linear-gradient(to bottom, rgb(49, 49, 49), rgb(56, 56, 56) 15%, rgb(56, 56, 56) 85%, rgb(49, 49, 49) 100%);
+        }
+        
+        #andSo {
+            padding-top: 75px;
+            height: auto;
+            grid-area: d;
+            background: linear-gradient(to bottom, rgb(49, 49, 49), rgb(42, 42, 42) 85%);
+        }
+        
+        .collageA {
+            position: absolute;
             object-fit: cover;
             height: 100%;
+            width: 35%;
         }
-        #wrapA {
-            grid-template-rows: 60px auto auto auto auto 250px 75px;
+        
+        #collageA1 {
+            left: 0;
         }
+        
+        #collageA2 {
+            left: 35%;
+        }
+        
+        #collageA3 {
+            left: 70%;
+        }
+        
         .collage {
-            height: 20%;
-            width: 60%;
-            top: 40%;
-            left: 15%;
+            position: absolute;
+            height: 50%;
+            width: 40%;
+            object-fit: cover;
+            top: 5%;
+            left: 20%;
         }
-    }
+        
+        #collage1 {
+            z-index: 0;
+        }
+        
+        #collage2 {
+            transform: rotate(30deg);
+            z-index: -1;
+            left: -10%;
+            top: 65%;
+        }
+        
+        #collage3 {
+            transform: rotate(-20deg);
+            z-index: -2;
+            left: -15%;
+            top: 10%;
+        }
+        
+        #collage4 {
+            transform: rotate(18deg);
+            z-index: -3;
+            top: 0;
+            left: 50%;
+        }
+        
+        #collage5 {
+            transform: rotate(-20deg);
+            z-index: -5;
+            left: 45%;
+            top: 25%;
+        }
+        
+        #collage6 {
+            transform: rotate(12deg);
+            z-index: -4;
+            left: 40%;
+            top: 75%;
+        }
+        
+        #collage7 {
+            transform: rotate(-22deg);
+            z-index: -6;
+            top: 90%;
+            left: 5%;
+        }
+        
+        #collage8 {
+            transform: rotate(-22deg);
+            z-index: -6;
+            top: 50%;
+            left: 5%;
+        }
+        
+        #collage9 {
+            transform: rotate(45deg);
+            z-index: -6;
+            top: 45%;
+            left: 60%;
+        }
+        
+        #collage10 {
+            transform: rotate(45deg);
+            z-index: -6;
+            top: 60%;
+            left: 50%;
+        }
+        
+        #collage11 {
+            transform: rotate(-10deg);
+            z-index: -6;
+            top: 30%;
+            left: -10%;
+        }
+        
+        #discWrap {
+            display: grid;
+            grid-template-rows: 120px auto 130px;
+            grid-template-areas: "." "discussion" ".";
+        }
+        
+        .sender {
+            display: flex;
+            align-items: center;
+        }
+        
+        .pfp {
+            height: 70px;
+            padding: 10px;
+        }
+        
+        .pfName {
+            font-size: 1.5rem;
+            font-family: serif;
+        }
+        
+        #arrow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 130px;
+            right: 10px;
+            border-radius: 30px;
+            border: solid rgb(255, 78, 160) 2px;
+            background-color: rgba(24, 24, 24);
+            height: 60px;
+            width: 60px;
+            z-index: 3;
+        }
+        
+        #arrow:hover {
+            cursor: pointer;
+        }
+        
+        .crossedArrow #line4 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .crossedArrow #line5 {
+            opacity: 0;
+        }
+        
+        .crossedArrow #line6 {
+            transform: rotate(45deg) translate(-6px, -7px);
+        }
+        
+        .burger_line2 {
+            background-color: seashell;
+            height: 3px;
+            width: 25px;
+            margin: 3px;
+            border-radius: 10%;
+            transition: all 0.3s;
+        }
+        
+        #discNav {
+            right: 100%;
+            overflow: scroll;
+            /*Kunde inte hitta något sätt att styla scroll-baren, så den fick tyvärr fortsätta vara vit (vilket enligt mig skapar en jobbig kontrast, och ibland är ivägen för annan styling)*/
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(30, 30, 30);
+            z-index: 2;
+            padding: 80px 20px 130px;
+            transition: all .3s;
+        }
+        
+        #discNavH {
+            padding-bottom: 10px;
+        }
+        
+        .userHead {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        .userDesc {
+            position: relative;
+            padding-left: 55px;
+            padding-right: 40px;
+            margin-bottom: 25px;
+            filter: opacity(0.8);
+        }
+        
+        .userDesc .titleWrapP {
+            justify-content: left;
+            padding-bottom: 5px;
+        }
+        
+        .vl {
+            position: absolute;
+            left: 35px;
+            height: 100%;
+            width: 1px;
+            background-color: white;
+        }
+        
+        .navName {
+            font-size: 1.3rem;
+            border-bottom: solid rgb(255, 78, 160) 2px;
+        }
+        
+        .navName:hover {
+            cursor: pointer;
+        }
+        
+        .userLink {
+            font-size: .9rem;
+            color: rgb(255, 78, 160);
+            font-weight: bold;
+        }
+        
+        .userQuote {
+            font-size: .9rem;
+            padding: 20px 0 10px;
+            color: rgb(230, 230, 230);
+            font-style: italic;
+        }
+        
+        .discNavActive {
+            transform: translateX(100%);
+        }
+        
+        #backTrack {
+            display: block;
+            color: rgb(255, 78, 160);
+            font-weight: bold;
+            margin-top: 40px;
+        }
+        
+        @media screen and (min-width:800px) {
+            #burger {
+                display: none;
+            }
+            #nav_links {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                background-color: transparent;
+                position: static;
+                height: auto;
+            }
+            nav {
+                width: 100%;
+            }
+            #logga:hover {
+                filter: grayscale(40%);
+            }
+            #wrapI {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 60px 90vh auto 250px 75px;
+                grid-template-areas: ". . ." "we we we" "ns fy ht" "fo fo fo"". . .";
+            }
+            hr {
+                display: none;
+            }
+            #dotWrap {
+                display: none;
+            }
+            #rooms {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "ra rc";
+            }
+            #wrapP {
+                grid-template-rows: 90px 1fr 250px 75px;
+            }
+            #zedditHead {
+                padding: 20px;
+            }
+            .artAbA {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .artAbB {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .artAbC {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .artAbC .textAb {
+                width: 70%;
+                text-align: center;
+            }
+            .textAb {
+                width: 45%;
+            }
+            .imgAb {
+                width: 30%;
+                object-fit: cover;
+                height: 100%;
+            }
+            #wrapA {
+                grid-template-rows: 60px 100px auto auto auto auto 250px 75px;
+            }
+            .collage {
+                height: 20%;
+                width: 60%;
+                top: 40%;
+                left: 15%;
+            }
+            #arrow {
+                display: none;
+            }
+            #discNav {
+                left: 0;
+                width: 350px;
+            }
+            #discWrap {
+                grid-template-columns: 350px auto;
+                grid-template-areas: ". ." ". discussion" ". .";
+            }
+            #discussionBody header #searchHCont {
+                left: 350px;
+                width: calc(100% - 350px);
+            }
+            #inputWrap {
+                left: 350px;
+                width: calc(100% - 350px);
+                padding-left: 0;
+            }
+            #pfWrap {
+                position: relative;
+            }
+        }

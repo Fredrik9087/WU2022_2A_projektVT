@@ -15,7 +15,9 @@
         <a href="index.html">
             <img id="logga" src="img/logo.png" alt="our logo">
         </a>
-        <input class="searchbarH" placeholder="Other discussions..." type="text">
+        <section id="searchHCont">
+            <input id="searchbarH" placeholder="Other discussions..." type="text">
+        </section>
         <nav>
             <ul id="nav_links">
                 <li>
@@ -37,17 +39,91 @@
     </header>
     <div id="discWrap">
         <div id="arrow">
-            <div class="burger_line" id="line4"></div>
-            <div class="burger_line" id="line5"></div>
+            <div class="burger_line2" id="line4"></div>
+            <div class="burger_line2" id="line5"></div>
+            <div class="burger_line2" id="line6"></div>
         </div>
-        <nav id="discNav"></nav>
+        <nav id="discNav">
+            <h1 id="discNavH">Participants</h1>
+            <ul>
+                <li>
+                    <details>
+                        <summary>
+                            <section class="userHead">
+                                <img class="pfp" src="img/taco.png" alt="The users profile picture">
+                                <section>
+                                    <h2 class="navName">TacoSlafsare82</h2>
+                                    <p class="sideP">Admin</p>
+                                </section>
+                            </section>
+                        </summary>
+                        <section id="tacoDesc" class="userDesc">
+                            <div class="vl"></div>
+                            <a href="Länk till Tacoslafsarens profil" class="userLink">View profile</a>
+                            <p class="userQuote">“Season of mists and mellow fruitfulness”</p>
+                            <section class="titleWrapP">
+                                <div class="title">Swedish</div>
+                                <div class="title">Middleschool teacher</div>
+                                <div class="title">Linguistic Major</div>
+                            </section>
+                        </section>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>
+                            <section class="userHead">
+                                <img class="pfp" src="img/melon.png" alt="The user's profile picture">
+                                <section>
+                                    <h2 class="navName">MelonHuvudet41</h2>
+                                    <p class="sideP">User</p>
+                                </section>
+                            </section>
+                        </summary>
+                        <section class="userDesc">
+                            <div class="vl"></div>
+                            <a href="Länk till Melonhuvudets profil" class="userLink">View profile</a>
+                            <p class="userQuote">“The greatest victory is that which requires no battle.”</p>
+                            <section class="titleWrapP">
+                                <div class="title">Swedish</div>
+                                <div class="title">Department of Education</div>
+                                <div class="title">Business major</div>
+                            </section>
+                        </section>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>
+                            <section class="userHead">
+                                <img class="pfp" src="img/korv.png" alt="The users profile picture">
+                                <section>
+                                    <h2 class="navName">KorvbrödsAvnjutare93</h2>
+                                    <p class="sideP">User</p>
+                                </section>
+                            </section>
+                        </summary>
+                        <section class="userDesc">
+                            <div class="vl"></div>
+                            <a href="Länk till Korvbrödsavnjutarens profil" class="userLink">View profile</a>
+                            <p class="userQuote">“Korv e verkligen gott asså”</p>
+                            <section class="titleWrapP">
+                                <div class="title">Swedish</div>
+                                <div class="title">Highschool student</div>
+                            </section>
+                        </section>
+                    </details>
+                </li>
+            </ul>
+            <a href="preview.html" id="backTrack">Back to discussion preview</a>
+        </nav>
         <main id="platform">
             <article class="message">
                 <section class="sender">
                     <img class="pfp" src="img/taco.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> TacoSlafsare82
-                        </h1>
+                        <p class="pfName"> TacoSlafsare82
+                        </p>
                         <p class="sideP">dd mmm, åååå</p>
                     </section>
                 </section>
@@ -57,8 +133,8 @@
                 <section class="sender">
                     <img class="pfp" src="img/melon.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> MelonHuvudet41
-                        </h1>
+                        <p class="pfName"> MelonHuvudet41
+                        </p>
                         <p class="sideP">dd mmm, åååå</p>
                     </section>
                 </section>
@@ -73,8 +149,8 @@
                 <section class="sender">
                     <img class="pfp" src="img/taco.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> TacoSlafsare82
-                        </h1>
+                        <p class="pfName"> TacoSlafsare82
+                        </p>
                         <p class="sideP">dd mmm, åååå</p>
                     </section>
                 </section>
@@ -85,8 +161,8 @@
                 <section class="sender">
                     <img class="pfp" src="img/melon.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> MelonHuvudet41
-                        </h1>
+                        <p class="pfName"> MelonHuvudet41
+                        </p>
                         <p class="sideP">dd mmm, åååå</p>
                     </section>
                 </section>
@@ -98,8 +174,8 @@
                 <section class="sender">
                     <img class="pfp" src="img/korv.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> KorvbrödsAvnjutare93
-                        </h1>
+                        <p class="pfName"> KorvbrödsAvnjutare93
+                        </p>
                         <p class="sideP">dd mmm, åååå</p>
                     </section>
                 </section>
@@ -110,8 +186,8 @@
                 <section class="sender">
                     <img class="pfp" src="img/melon.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> MelonHuvudet41
-                        </h1>
+                        <p class="pfName"> MelonHuvudet41
+                        </p>
                         <p class="sideP">dd mmm, åååå</p>
                     </section>
                 </section>
@@ -127,8 +203,8 @@
                 <section class="sender">
                     <img class="pfp" src="img/taco.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> TacoSlafsare82
-                        </h1>
+                        <p class="pfName"> TacoSlafsare82
+                        </p>
                         <p class="sideP">dd mmm, åååå</p>
                     </section>
                 </section>
@@ -138,8 +214,8 @@
                 <section class="sender">
                     <img class="pfp" src="img/taco.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> TacoSlafsare82
-                        </h1>
+                        <p class="pfName"> TacoSlafsare82
+                        </p>
                         <p class="sideP">dd mmm, åååå</p>
                     </section>
                 </section>
@@ -150,8 +226,8 @@
                 <section class="sender">
                     <img class="pfp" src="img/korv.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> KorvbrödsAvnjutare93
-                        </h1>
+                        <p class="pfName"> KorvbrödsAvnjutare93
+                        </p>
                         <p class="sideP">dd mmm, åååå</p>
                     </section>
                 </section>
@@ -161,8 +237,8 @@
                 <section class="sender">
                     <img class="pfp" src="img/melon.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> MelonHuvudet41
-                        </h1>
+                        <p class="pfName"> MelonHuvudet41
+                        </p>
                         <p class="sideP">dd mmm, åååå</p>
                     </section>
                 </section>
@@ -178,8 +254,8 @@
                 <section class="sender">
                     <img class="pfp" src="img/korv.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> KorvbrödsAvnjutare93
-                        </h1>
+                        <p class="pfName"> KorvbrödsAvnjutare93
+                        </p>
                         <p class="sideP">dd mmm, åååå</p>
                     </section>
                 </section>
@@ -191,8 +267,8 @@
                 <section class="sender">
                     <img class="pfp" src="img/melon.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> MelonHuvudet41
-                        </h1>
+                        <p class="pfName"> MelonHuvudet41
+                        </p>
                         <p class="sideP">dd mmm, åååå</p>
                     </section>
                 </section>
@@ -203,8 +279,8 @@
                 <section class="sender">
                     <img class="pfp" src="img/taco.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> TacoSlafsare82
-                        </h1>
+                        <p class="pfName"> TacoSlafsare82
+                        </p>
                         <p class="sideP">dd mmm, åååå</p>
                     </section>
                 </section>
@@ -214,8 +290,8 @@
                 <section class="sender">
                     <img class="pfp" src="img/melon.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> MelonHuvudet41
-                        </h1>
+                        <p class="pfName"> MelonHuvudet41
+                        </p>
                         <p class="sideP">dd mmm, åååå</p>
                     </section>
                 </section>
@@ -225,8 +301,8 @@
                 <section class="sender">
                     <img class="pfp" src="img/korv.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> KorvbrödsAvnjutare93
-                        </h1>
+                        <p class="pfName"> KorvbrödsAvnjutare93
+                        </p>
                         <p class="sideP">20 maj, 2022</p>
                     </section>
                 </section>
@@ -237,8 +313,8 @@
                 <section class="sender">
                     <img class="pfp" src="img/korv.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> KorvbrödsAvnjutare93
-                        </h1>
+                        <p class="pfName"> KorvbrödsAvnjutare93
+                        </p>
                         <p class="sideP">20 maj, 2022</p>
                     </section>
                 </section>
@@ -248,8 +324,8 @@
                 <section class="sender">
                     <img class="pfp" src="img/taco.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> TacoSlafsare82
-                        </h1>
+                        <p class="pfName"> TacoSlafsare82
+                        </p>
                         <p class="sideP">08:14</p>
                     </section>
                 </section>
@@ -266,8 +342,8 @@
                 <section class="sender">
                     <img class="pfp" src="img/melon.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> MelonHuvudet41
-                        </h1>
+                        <p class="pfName"> MelonHuvudet41
+                        </p>
                         <p class="sideP">08:20</p>
                     </section>
                 </section>
@@ -278,7 +354,7 @@
                 <section class="sender">
                     <img class="pfp" src="img/taco.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> TacoSlafsare82</h1>
+                        <p class="pfName"> TacoSlafsare82</p>
                         <p class="sideP">08:32</p>
                     </section>
                 </section>
@@ -290,7 +366,7 @@
                 <section class="sender">
                     <img class="pfp" src="img/melon.png" alt="The users profile picture">
                     <section>
-                        <h1 class="pfName"> MelonHuvudet41</h1>
+                        <p class="pfName"> MelonHuvudet41</p>
                         <p class="sideP">13:21</p>
                     </section>
                 </section>
@@ -298,29 +374,28 @@
             </article>
         </main>
     </div>
-
+    <section id="inputWrap">
+        <input id="inputDisc" type="text" placeholder="Discuss the topic">
+    </section>
     <nav id="profile">
         <img id="pfp" src="img/pfp.png" alt="Your profile picture">
-        <h1 id="pfName"> Username123
-        </h1>
-        <div id="pfWrap">
-            <div class="titleWrapP">
+        <p id="pfName"> Username123
+        </p>
+        <section id="pfWrap">
+            <section class="titleWrapP">
                 <div class="title">tiittlle</div>
                 <div id="dotWrap">
                     <div class="dot"></div>
                     <div class="dot"></div>
                     <div class="dot"></div>
                 </div>
-            </div>
-            <div id="inputWrap">
-                <input id="inputDisc" type="text" placeholder="Discuss the topic">
-            </div>
-            <div id="funcWrap">
+            </section>
+            <section id="funcWrap">
                 <img class="func" src="img/wave.png" alt="find others">
                 <img class="func" src="img/book.png" alt="history">
                 <img class="func" src="img/cog.png" alt="settings">
-            </div>
-        </div>
+            </section>
+        </section>
     </nav>
     <script src="js/script.js"></script>
 </body>
